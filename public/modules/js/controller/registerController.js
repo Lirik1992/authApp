@@ -1,5 +1,5 @@
 var RegisterController = (function () {
-    "use strict"
+    'use strict';
     var registerMethod = function (evt) {
         evt.preventDefault();
 
@@ -10,7 +10,8 @@ var RegisterController = (function () {
             password: document.getElementsByName("password")[0].value
         };
         var result = UserService.register(registerForm);
-    }
+    
+    };
 
     return {
         register: registerMethod
