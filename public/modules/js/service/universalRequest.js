@@ -1,4 +1,5 @@
-const POST = 'POST', GET = 'GET', CONTENT_TYPE = 'Content-Type', APPLICATION = 'application/json', REQUEST = new XMLHttpRequest;
+const POST = 'POST', GET = 'GET', CONTENT_TYPE = 'Content-Type', 
+APPLICATION = 'application/json', REQUEST = new XMLHttpRequest;
 
 var data = {
     name: 'Rick',
@@ -14,35 +15,19 @@ function UniversalRequest(method, url, data) {
     this.url = url;
     this.data = data;
 
-    if (method == POST) {
-        let body = JSON.stringify(data);
-        REQUEST.open(POST, url);
-        REQUEST.setRequestHeader(CONTENT_TYPE, APPLICATION);
-        REQUEST.onreadystatechange = function () {
-            if (REQUEST.readyState == 4) {
-                if (REQUEST.status == 200) {
-                    console.log(REQUEST.responseText);
-                } else {
-                    console.log(REQUEST.responseType + REQUEST.responseText + REQUEST.status);
-                }
+    let body = JSON.stringify(data);
+    REQUEST.open(method, url);
+    REQUEST.setRequestHeader(CONTENT_TYPE, APPLICATION);
+    REQUEST.onreadystatechange = function () {
+        if (REQUEST.readyState == 4) {
+            if (REQUEST.status == 200) {
+                console.log(REQUEST.responseText);
+            } else {
+                console.log(REQUEST.responseType + REQUEST.responseText + REQUEST.status);
             }
-        };
-        REQUEST.send(body);
-    }
-
-    if (method == GET) {
-        REQUEST.open(GET, url);
-        REQUEST.setRequestHeader(CONTENT_TYPE, APPLICATION);
-        REQUEST.onreadystatechange = function () {
-            if (REQUEST.readyState == 4) {
-                if (REQUEST.status == 200) {
-                    console.log(REQUEST.responseText);
-                } else {
-                    console.log(REQUEST.responseType + REQUEST.responseText + REQUEST.status);
-                }
-            }
-        };
-        REQUEST.send();
-    }
+        }
+    };
+    REQUEST.send(body);
 }
+
 

@@ -58,12 +58,19 @@ router.post('/authenticate', (req, res, next) => {
     });
 });
 
-// Login
+// 
 router.get('/profile', passport.authenticate('jwt', {session: false}), (req, res, next) => {
     res.json({user: req.user});
 });
 
-// Login
+
+router.get('/getall', (req, res, next) => {
+    User.find({}, function(err, user) {
+        res.json(user);
+    });
+});
+
+// 
 router.get('/validate', (req, res, next) => {
     res.send('VALIDATE') 
 });

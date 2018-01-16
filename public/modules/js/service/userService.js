@@ -33,8 +33,9 @@ var UserService = (function () {
 
     var registerMethod = function (registerForm) {
 
-        var request = new XMLHttpRequest();
+        
         var body = JSON.stringify(registerForm);
+        var request = new XMLHttpRequest();
         request.open('POST', 'http://localhost:3000/users/register');
         request.setRequestHeader('Content-type', 'application/json');
         request.onreadystatechange = function () {
