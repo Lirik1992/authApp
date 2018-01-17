@@ -5,10 +5,10 @@ var Http = (function () {
      *  - url: String
      *  - data: (Object)
      *  - callback: function(data) {typeof return === json}
-     * @param {*} method 
-     * @param {*} url 
-     * @param {*} data 
-     * @param {*} callback 
+     * @param {String} method 
+     * @param {String} url 
+     * @param {Object} data 
+     * @param {function} callback 
      */
     function Http(method, url, data, callback) {
         this.method = method;
