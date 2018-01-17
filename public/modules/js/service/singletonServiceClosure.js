@@ -2,19 +2,20 @@
 // Экземпляр в замыкании
 
 function Singleton() {
+
+    //Сохраненный экземпляр
     var instance = this;
 
-
-    this.get = function() {
+    //Создать новый экземпляр
+    this.get = function () {
         console.log('Get');
     };
-
-    this.post = function() {
+    this.post = function () {
         console.log('Post');
     }
 
-    // Переопределить конструктор
-    Singleton = function() {
+    //Переопределить конструктор
+    Singleton = function () {
         return instance;
     };
 }
