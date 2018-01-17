@@ -1,10 +1,9 @@
 var Http = (function () {
-    function UniversalRequest(method, url, data, callback) {
+    
+    function Http(method, url, data, callback) {
         this.method = method;
         this.url = url;
         this.data = data;
-        this.callback = callback;
-        var self = this;
 
         var body = JSON.stringify(data);
         var xhr = new XMLHttpRequest()
@@ -13,17 +12,18 @@ var Http = (function () {
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 console.log(xhr.responseText);
+                callback(xhr.responseText);
             }
         };
         xhr.send(body);
     }
 
-    var privateGet = function (url, callback) {
-        UniversalRequest('GET', url, callback);
+    var privateGet = function (url, cb) {
+        Http('GET', url, null, cb);
     };
 
-    var privatePost = function (url, data, callback) {
-        UniversalRequest('POST', url, data, callback);
+    var privatePost = function (url, data, cb) {
+        Http('POST', url, data, cb);
     }
 
     return {
@@ -31,8 +31,6 @@ var Http = (function () {
         post: privatePost
     }
 })();
-
-
 
 Http.get("http://localhost:3000/users/getall", function (data) {
     alert("button on get correct " + data);
@@ -44,7 +42,8 @@ Http.post("http://localhost:3000/users/register",
         email: "ds@dsj.ru",
         username: "Dimon",
         password: "111"
-    }, function (err, data) {
+    }, function (data) {
         alert("button on post correct " + data)
-    });
+    }
+);
 
