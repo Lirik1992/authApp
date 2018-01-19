@@ -12,89 +12,132 @@
 </head>
 
 <body>
+
     <div class="pimg1">
         <div class="ptext">
             <span class="border">
-                Paralax Website
+                Lirikus
             </span>
         </div>
+
     </div>
 
     <section class="section section-light">
-        <h2>Section One</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, enim accusamus similique, incidunt, inventore tempora
-            aliquid ducimus modi laborum nihil voluptas molestiae in. Tempore, natus molestiae? Minus architecto velit consectetur
-            laborum ut expedita error possimus dignissimos! Praesentium dolore repellendus ducimus nulla beatae suscipit
-            et corporis fuga! Rerum mollitia quae tempore voluptates laborum exercitationem perferendis natus dicta excepturi
-            ab, vel veniam. Dolores harum eveniet sunt inventore commodi repudiandae animi ducimus voluptatem similique molestiae
-            eius veniam minus enim, quibusdam, pariatur nostrum in, sequi praesentium. Beatae deleniti atque, recusandae
-            repudiandae quam eum sint quae ea illum rem nemo ad adipisci ab et unde!</p>
 
-            <div class="container">
-                <div class="col-lg-3">
-                    <button class="pulse">Login</button>
-                    <button class="pulse">Register</button>
-                </div>
+        <div class="sectionContainerOne">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ipsum ipsa soluta sunt distinctio vitae modi
+                atque quo facilis? Quibusdam expedita labore error dolores eaque deleniti atque delectus laboriosam assumenda.</p>
+
+
+            <div class="loginRegister">
+                <button onclick="location.href = 'lirikloginform.html'" class="pulse">Login</button>
+                <button id="registerButton" class="pulse">Register</button>
             </div>
+            <script type="text/javascript">
+                document.getElementById('registerButton').onclick = function () {
+                    location.href = 'registernewaccount.html';
+                }
+            </script>
+
+            <span>
+
+            </span>
+        </div>
     </section>
 
     <div class="pimg2">
         <div class="ptext">
             <span class="border trans">
-                Image Two Text
+                Powered by
             </span>
         </div>
     </div>
 
     <section class="section section-dark">
-        <h2>Section Two</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, enim accusamus similique, incidunt, inventore tempora
-            aliquid ducimus modi laborum nihil voluptas molestiae in. Tempore, natus molestiae? Minus architecto velit consectetur
-            laborum ut expedita error possimus dignissimos! Praesentium dolore repellendus ducimus nulla beatae suscipit
-            et corporis fuga! Rerum mollitia quae tempore voluptates laborum exercitationem perferendis natus dicta excepturi
-            ab, vel veniam.
-        </p>
+        <div class="sectionContainerTwo">
+            <div class="row">
+                <div class="inlineimg">
+                    <img id="im1" src="images/anjs.png" alt="">
+                    <img id="im2" src="images/Boot3.png" alt="">
+                    <img id="im3" src="images/Njs.png" alt="">
+                    <img id="im4" src="images/css3.png" alt="">
+                </div>
+            </div>
+        </div>
     </section>
 
     <div class="pimg3">
         <div class="ptext">
             <span class="border trans">
-                Image Two Text
+                Dive in
             </span>
         </div>
     </div>
 
     <section class="section section-dark">
-        <h2>Section Three</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, enim accusamus similique, incidunt, inventore tempora
-            aliquid ducimus modi laborum nihil voluptas molestiae in. Tempore, natus molestiae? Minus architecto velit consectetur
-            laborum ut expedita error possimus dignissimos! Praesentium dolore repellendus ducimus nulla beatae suscipit
-            et corporis fuga! Rerum mollitia quae tempore voluptates laborum exercitationem perferendis natus dicta excepturi
-            ab, vel veniam.
-        </p>
+        <h3>About</h3>
+
     </section>
 
-    <div class="footcontainer">
+    <footer class="footer">
         <div class="container">
-            <div class="col-lg-3">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, reiciendis inventore! Eum explicabo vitae libero?
-            </div>
-            <div class="col-lg-3">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, consequatur?
-            </div>
-            <div class="col-lg-6">
-                <div class="footer-social-icons">
-                    <h4 class="_14">Follow us on</h4>
-                    <ul class="social-icons">
-                        <li><a href="" class="social-icon"> <i class="fa fa-vk"></i></a></li>
-                        <li><a href="" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
-                        <li><a href="" class="social-icon"> <i class="fa fa-github"></i></a></li>
-                        <li><a href="" class="social-icon"> <i class="fa fa-bitbucket"></i></li>
+            <div class="row">
+                <div class="col-lg-3">
+                    <ul>
+                        <li class="title">Overview</li>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Devices</a>
+                        </li>
+                        <li>
+                            <a href="#">Summary</a>
+                        </li>
                     </ul>
+                </div>
+                <div class="col-lg-3">
+                    <ul>
+                        <li class="title">Overview</li>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Devices</a>
+                        </li>
+                        <li>
+                            <a href="#">Summary</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <div class="footer-social-icons">
+                        <ul class="social-icons">
+                            <li>
+                                <a href="" class="social-icon">
+                                    <i class="fa fa-vk"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="social-icon">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="social-icon">
+                                    <i class="fa fa-github"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="social-icon">
+                                    <i class="fa fa-bitbucket"></i>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </footer>
 
 </body>
 

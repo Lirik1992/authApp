@@ -36,7 +36,7 @@ body, html {
 
 .pimg3 {
     background-image: url('../../images/picturethree.jpeg');
-    min-height: 60%;
+    min-height: 72.3%;
 }
 
 .section {
@@ -65,6 +65,16 @@ body, html {
     text-transform: uppercase;
 }
 
+.loginRegister {
+    margin-top: 1.6em;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
 .ptext .border {
     background-color: #111;
     color: #fff;
@@ -75,17 +85,41 @@ body, html {
     background-color: transparent;
 }
 
-.footcontainer {
-    background-color: #f4f4f4;
-    color: #666; 
-    text-align: center;
-    padding: 50px 80px;
-}
+.footer {
+    padding: 60px 0;
+    background: #111112;
+  }
+  .footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .footer .social {
+    color: black;
+  }
+  .footer li, .footer a {
+    color: #666666;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+  .footer .title {
+    margin-bottom: .5rem;
+    font-size: 14px;
+    color: #ccc;
+    border-bottom: 1px solid #333;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .footer .col-sm-3 {
+      padding-bottom: 2rem;
+    }
+  }
 
 .pulse:hover,
 .pulse:focus {
-  -webkit-animation: pulse 1s;
-          animation: pulse 1s;
+  -webkit-animation: pulse 0.7s;
+          animation: pulse 0.7s;
   -webkit-box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
           box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
 }
@@ -104,23 +138,34 @@ body, html {
   }
 }
 
+.inlineimg {
+    display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: center;
+    justify-content: space-between;
+}
+
 
 .pulse {
-  --color: #ef6eae;
-  --hover: #ef8f6e;
+  --color: #6eefde;
+  --hover: #6eb5ef;
 }
 
 button {
   color: var(--color);
   -webkit-transition: 0.25s;
   transition: 0.25s;
+
+  height: 40px;
+  width: 80px;
 }
 
 button:hover, button:focus {
   border-color: var(--hover);
-  color: #fff;
+  color: black;
 }
-
 
 button {
   background: transparent;
@@ -130,3 +175,17 @@ button {
   margin: 0;
   padding: 0;
 }
+
+#im1 {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+#im2 {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+#im3 {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+#im4 {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
